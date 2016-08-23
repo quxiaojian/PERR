@@ -11,11 +11,6 @@ my $outdir=&default(".","outdir");
 
 my $pattern1="_1.fq";
 my $pattern2="_2.fq";
-
-my $logfile="$outdir/remove_$organ\_from_fq.log";
-system ("rm -rf $logfile") if (-e $logfile);
-open(my $log,">>",$logfile);
-
 my (@filenames1,@filenames2);
 find(\&target1,$indir);
 sub target1{
@@ -31,6 +26,10 @@ sub target2{
     }
     return;
 }
+
+my $logfile="$outdir/remove_$organ\_from_fq.log";
+system ("rm -rf $logfile") if (-e $logfile);
+open(my $log,">>",$logfile);
 
 while (@filenames1 and @filenames2){
 	my $forward=shift @filenames1;
