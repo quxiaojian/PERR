@@ -2,6 +2,7 @@
 use strict;
 use Getopt::Long;
 use File::Find;
+use Data::Dumper;
 
 my $global_options=&argument();
 my $indir=&default("Reads","indir");
@@ -12,7 +13,6 @@ my $outdir=&default(".","outdir");
 my $pattern1="recruited_reads.1.fq";
 my $pattern2="recruited_reads.2.fq";
 my (@filenames1,@filenames2);
-
 find(\&target1,$indir);
 sub target1{
     if (/$pattern1/){
@@ -102,7 +102,7 @@ __DATA__
 
 =head1 DESCRIPTION
 
-    Generate bash file for performing spades.
+    Generate bash file for performing spades assembly.
 
 =head1 SYNOPSIS
 
