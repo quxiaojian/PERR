@@ -23,7 +23,6 @@ if ($fq eq "F"){
 
 
 my (@filenames1,@filenames2);
-
 find(\&target1,$indir);
 sub target1{
     if (/$pattern1/){
