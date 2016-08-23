@@ -2,6 +2,7 @@
 use strict;
 use Getopt::Long;
 use File::Find;
+use Data::Dumper;
 
 my $global_options=&argument();
 my $indir=&default("Reads","indir");
