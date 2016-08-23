@@ -1,5 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
+use Data::Dumper;
+$|=1;
 
 print "Please type your forward paired-end fq reads:";
 my $forward=<STDIN>;
