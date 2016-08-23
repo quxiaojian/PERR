@@ -3,7 +3,7 @@
 #
 #    PERR.pl Paired-End Reads Recruitment
 #
-#    Given the mapped reads output from bowtie2 as seed reads it recruits overlapped reads from original fastq by extending seeds.
+#    Given the mapped reads output from bowtie2 as seeds it recruits overlapped reads from original fastq by extending seeds.
 #
 #    Copyright (C) 2016 Xiao-Jian Qu
 #
@@ -29,9 +29,8 @@ use File::Basename;
 use Term::ProgressBar;
 use File::Copy;
 use Data::Dumper;
+
 my $now1=time;
-
-
 my $global_options=&argument();
 my $kmer=&default("101","kmer");
 my $run=&default("10000","run");
@@ -439,7 +438,7 @@ __DATA__
 
     [-h -help]           help information.
     [-k -kmer]           kmer value or specifically overlap value between two reads (default: 101).
-    [-i -run]            the extending runs of reads recruitment (default: 2000).
+    [-i -run]            the extending runs of reads recruitment (default: 10000).
     [-f -forward]        raw forward fastq.
     [-r -reverse]        raw reverse fastq.
     [-s1 -seed1]         mapped forward reads from bowtie2 as seed reads (default: seed_reads_cp.1).
