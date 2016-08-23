@@ -101,7 +101,7 @@ __DATA__
 
 =head1 DESCRIPTION
 
-    Generate bash file for performing bowtie.
+    Generate bash file for performing bowtie mapping.
 
 =head1 SYNOPSIS
 
