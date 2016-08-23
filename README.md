@@ -56,15 +56,15 @@ You can check sequence identifier for your Illumina fq data.<br />
 
 ```
 bowtie_bash.pl
-The script used to generate bash file (.sh) for performing batch mapping.
+generate bash file (.sh) for performing batch mapping.
 remove_cp_or_mt_from_fq.pl
-The script used to remove mt or cp reads from raw fq reads in batch processing mode.
+remove mt or cp reads from raw fq reads in batch processing mode.
 perr_bash.pl
-The script used to generate bash file (.sh) for performing batch recruiting.
+generate bash file (.sh) for performing batch recruiting.
 PERR.pl
-The main script used to recruit overlapped reads.
+main script for recruiting reads.
 spades_bash.pl
-The script used to generate bash file (.sh) for performing assembling.
+generate bash file (.sh) for performing assembly.
 ```
 
 ###TUTORIAL I<br />
