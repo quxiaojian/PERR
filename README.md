@@ -45,11 +45,12 @@ You can test PERR.pl by type ~/PATH/TO/PERR.pl, which will show the usage inform
 (3) download assemble softwares such as [spades](http://bioinf.spbau.ru/spades) or [velvet](https://github.com/dzerbino/velvet), and assembly graph visiual software [bandage](https://github.com/rrwick/Bandage). Also put it in your PATH.<br />
 
 ##NOTES<br />
-(1) The format of "Sequence identifier" for my own Illumina fq data is as follows: @EAS139:136:FC706VJ:2:5:1000:12850 1:N:0 @EAS139:136:FC706VJ:2:5:1000:12850 2:N:0<br />
+(1) Your raw paired-end reads filename should be xxx_1.fq and xxx_2.fq, so the scripts do not need to revise.<br />
+(2) The format of "Sequence identifier" (first line of every four lines, beginning with @ symbol) for my own Illumina fq data is as follows: @EAS139:136:FC706VJ:2:5:1000:12850 1:N:0 @EAS139:136:FC706VJ:2:5:1000:12850 2:N:0<br />
 Please check: http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_FASTQFiles.htm.
 You can check sequence identifier for your Illumina fq data.<br />
-(2) The kmer value in PERR can be set by yourself. The best value maybe 80% of read length. You can try several times for you case.<br />
-(3) The extending runs in PERR can be set to a more bigger value. PERR will stop recruiting when no overlapped reads can be extended.<br />
+(3) The kmer value in PERR can be set by yourself. The best value maybe 80% of read length. You can try several times for you case.<br />
+(4) The extending runs in PERR can be set to a more bigger value. PERR will stop recruiting when no overlapped reads can be extended.<br />
 
 ##TUTORIALS<br />
   TUTORIAL I and II are more similar. They are applied to enriched chloroplast DNA and total genomic DNA, respectively. I have writen several perl scripts to generate bash file (.sh), which can be used to assemble plastomes or mito-genomes in batch processing mode. Such as batch mapping, batch removing mt or cp reads from raw fq reads, batch recruiting and batch assembling. Please see how to operate in following specific tutorials.<br />
